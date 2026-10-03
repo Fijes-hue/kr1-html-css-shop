@@ -71,3 +71,45 @@ orderForm.addEventListener('submit', (event) => {
   // Закрываем модальное окно.
   orderDialog.close();
 });
+// ===============================
+// Кнопка "Наверх"
+// ===============================
+
+// Создаём кнопку программно и добавляем её в body.
+const scrollToTopButton = document.createElement('button');
+scrollToTopButton.type = 'button';
+scrollToTopButton.className = 'scroll-to-top';
+scrollToTopButton.setAttribute('aria-label', 'Вернуться наверх');
+scrollToTopButton.innerHTML = '&#8593;'; // стрелка вверх
+document.body.appendChild(scrollToTopButton);
+
+// Порог прокрутки в пикселях, после которого кнопка появляется.
+const SCROLL_THRESHOLD = 300;
+
+// Показываем или скрываем кнопку в зависимости от позиции скролла.
+function toggleScrollToTopButton() {
+  const shouldShow = window.scrollY > SCROLL_THRESHOLD;
+  scrollToTopButton.classList.toggle('is-visible', shouldShow);
+}
+
+// Плавно прокручиваем страницу наверх.
+function scrollToTop() {
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  window.scrollTo({
+    top: 0,
+    behavior: prefersReducedMotion ? 'auto' : 'smooth',
+  });
+}
+
+// Слушаем прокрутку страницы.
+window.addEventListener('scroll', toggleScrollToTopButton, { passive: true });
+
+// Слушаем клик по кнопке.
+scrollToTopButton.addEventListener('click', scrollToTop);
+
+// Проверяем состояние кнопки при загрузке страницы
+// (например, если браузер восстановил позицию скролла).
+toggleScrollToTopButton();
