@@ -8,20 +8,20 @@
   <script src="js/main.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="site-header">
-      <a class="site-logo" href="index.html">ShopProject</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#popular">Популярные товары</a></li>
-          <li><a href="#advantages">Преимущества</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+
+  <nav class="site-nav" aria-label="Основная навигация">
+    <ul class="site-nav__list">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="index.html#advantages">Преимущества</a></li>
+      <li><a href="index.html#popular">Популярные товары</a></li>
+      <li><a href="index.html#contacts">Обратная связь</a></li>
+    </ul>
+  </nav>
+
   <main>
+
     <section class="hero">
       <h1>Учебный интернет-магазин</h1>
       <p>
@@ -31,6 +31,7 @@
       </p>
       <a class="button" href="#popular">Перейти к товарам</a>
     </section>
+
     <section class="section" id="advantages">
       <h2>Преимущества проекта</h2>
       <ul class="advantages-list">
@@ -40,6 +41,7 @@
         <li>подготовка к разработке многостраничного сайта.</li>
       </ul>
     </section>
+
     <section class="section" id="popular">
       <h2>Популярные товары</h2>
       <article class="product-card">
@@ -51,6 +53,7 @@
           Заказать
         </button>
       </article>
+
       <article class="product-card">
         <img src="images/images2.jpeg">
         <h3>Товар 2</h3>
@@ -60,6 +63,7 @@
           Заказать
         </button>
       </article>
+
       <article class="product-card">
         <img src="images/images.jpeg">
         <h3>Товар 3</h3>
@@ -70,6 +74,7 @@
         </button>
       </article>
     </section>
+
     <aside class="aside-info">
       <h2>Информация для студентов</h2>
       <p>
@@ -79,10 +84,12 @@
       </p>
     </aside>
   </main>
+
   <footer id="contacts">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
+  
 <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
   <h2 id="order-dialog-title">Оформление заявки</h2>
 

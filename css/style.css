@@ -214,11 +214,9 @@ a:focus-visible {
   background-color: var(--color-success-bg);
 }
 /* ===============================
-   6. Горизонтальная сетка
+   6. Горизонтальная сетка (Контрольная работа 1)
    =============================== */
-
-
-.site-header {
+/* .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -305,4 +303,26 @@ footer p {
 header {
   position: sticky;
   top: 0;
+} */
+ .breadcrumbs {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-md);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+}
+
+.breadcrumbs span::before {
+  content: " / ";
+  color: var(--color-muted);
+}
+html {
+  scroll-behavior: smooth;
+}
+:target {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
 }
